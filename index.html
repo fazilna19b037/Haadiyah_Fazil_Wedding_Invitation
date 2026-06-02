@@ -66,7 +66,7 @@
   /* HERO */
   #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
     padding-top:120px;overflow:hidden;}
-  .hero-script{font-family:'Tangerine',cursive;font-size:clamp(3.5rem,11vw,8.5rem);line-height:.9;color:var(--maroon);}
+  .hero-script{font-family:'Tangerine',cursive;font-size:clamp(3.417rem,11vw,8.417rem);line-height:.9;color:var(--maroon);}
   .hero-amp{font-family:'Tangerine',cursive;font-size:clamp(2rem,6vw,4rem);display:block;margin:6px 0;color:var(--gold);}
   #hero .label{margin-bottom:30px;}
   .hero-date{font-family:'Marcellus',serif;letter-spacing:.3em;margin-top:34px;font-size:1rem;
@@ -115,7 +115,7 @@
   .card::before,.card::after{content:'';position:absolute;width:24px;height:24px;border:2px solid var(--gold);}
   .card::before{top:14px;left:14px;border-right:0;border-bottom:0;}
   .card::after{bottom:14px;right:14px;border-left:0;border-top:0;}
-  .name-big{font-family:'Tangerine',cursive;font-size:clamp(3rem,9vw,5.5rem);line-height:.95;color:var(--maroon);}
+  .name-big{font-family:'Tangerine',cursive;font-size:clamp(2.917rem,9vw,5.417rem);line-height:.95;color:var(--maroon);}
   .parent{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--gold-soft);}
   .with{font-family:'Marcellus',serif;letter-spacing:.3em;font-size:.8rem;text-transform:uppercase;
     margin:8px 0;color:var(--maroon-deep);}
@@ -191,9 +191,15 @@
     transition:opacity .6s;text-transform:uppercase;box-shadow:0 4px 14px rgba(94,20,38,.12);}
 
   footer{padding:60px 24px 90px;text-align:center;}
-  .footer-script{font-family:'Tangerine',cursive;font-size:3rem;color:var(--maroon);}
+  .footer-script{font-family:'Tangerine',cursive;font-size:2.917rem;color:var(--maroon);}
   .footer-small{font-family:'Marcellus',serif;letter-spacing:.25em;font-size:.7rem;
     text-transform:uppercase;color:var(--gold-soft);margin-top:12px;}
+
+  /* PHONE: keep couple names on a single line in the card */
+  @media (max-width:480px){
+    .card{padding:48px 22px;}
+    .name-big{font-size:clamp(2rem,11vw,2.9rem);white-space:nowrap;}
+  }
 </style>
 </head>
 <body>
@@ -524,14 +530,14 @@ document.getElementById("r-submit").addEventListener("click",function(){
   }
 });
 
-/* ---------- nasheed (plays a file you host: mashallah.mp3) ---------- */
-/* Add your own karaoke/instrumental audio file named "mashallah.mp3"   */
+/* ---------- nasheed (plays a file you host: music.mp3) ---------- */
+/* Add your own karaoke/instrumental audio file named "music.mp3"   */
 /* next to index.html in the repo. The button toggles play/pause.       */
 var btn=document.getElementById("musicBtn");
 var hint=document.getElementById("musicHint");
 var playing=false;
 
-var audio=new Audio("mashallah.mp3");
+var audio=new Audio("music.mp3");
 audio.loop=true;
 audio.preload="none";
 
@@ -645,4 +651,3 @@ setTimeout(function(){hint.style.opacity="0";},6000);
 </script>
 </body>
 </html>
-
