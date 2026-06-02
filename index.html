@@ -195,6 +195,12 @@
   .footer-small{font-family:'Marcellus',serif;letter-spacing:.25em;font-size:.7rem;
     text-transform:uppercase;color:var(--gold-soft);margin-top:12px;}
 
+  /* footer: maroon label + divider for stronger contrast */
+  footer .label{color:var(--maroon);}
+  footer .divider::before{background:linear-gradient(90deg,transparent,var(--maroon));}
+  footer .divider::after{background:linear-gradient(90deg,var(--maroon),transparent);}
+  footer .divider .diamond{background:var(--maroon);box-shadow:0 0 12px rgba(94,20,38,.5);}
+
   /* PHONE: keep couple names on a single line in the card */
   @media (max-width:480px){
     .card{padding:48px 22px;}
@@ -367,8 +373,8 @@
 
 <footer>
   <svg class="foliage bottom" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMin slice" id="vineBottom"></svg>
-  <div class="footer-script">Haadiyah Mehjabeen &amp; Fazil P S</div>
-  <div class="footer-small">02 &middot; 01 &middot; 2027 &mdash; Kerala</div>
+  <div class="divider"><span class="diamond"></span></div>
+  <div class="label">Best compliments from family &amp; friends</div>
 </footer>
 
 <div class="music-hint" id="musicHint">&#9834; Tap to play nasheed</div>
